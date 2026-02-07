@@ -1,70 +1,72 @@
-# Getting Started with Create React App
+# Marathi Bolibhasha Project 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Bolibhasha is a small React app for converting text between dialects and converting speech to text / text to speech. The app provides a simple UI with a navigation hamburger menu to switch between tools.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Text-to-Text Dialect Converter (`DialectConverter`): convert text between dialect variations.
+- TODO: Speech Converter (`SpeechConverter`): speech-to-text (listen) and text-to-speech (speak) functionality.
 
-### `npm start`
+## Start Frontend
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. Install dependencies:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```
+npm install
+```
 
-### `npm test`
+2. Run the development server:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+npm run start
+```
 
-### `npm run build`
+3. Open http://localhost:3000 in your browser.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Start Backend
 
-### `npm run eject`
+1. Install dependencies:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```
+npm install
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+2. Run the development server:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```
+node server.js
+```
 
-## Learn More
+or 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+nodemon server.js
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Project Structure (key files)
 
-### Code Splitting
+- `src/App.jsx` — main app container, renders header, navigation and selected component
+- `src/components/Navigation.jsx` — hamburger menu and navigation
+- `src/components/DialectConverter.jsx` — text-to-text dialect converter UI
+- `src/components/SpeechConverter.jsx` — speech converter (speech-to-text, text-to-speech)
+- `src/styles/Navigation.css` — navigation styles
+- `src/styles/SpeechConverter.css` — speech converter styles
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Usage
 
-### Analyzing the Bundle Size
+- Click the hamburger menu at the top-right to open the menu.
+- Select "Text to Text" to use the dialect converter.
+- Select "Speech Converter" to use the speech features (browser support required).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Notes:
+- Speech recognition uses the browser's `SpeechRecognition` API (webkitSpeechRecognition/SpeechRecognition). It may not work in all browsers; Chrome is recommended for best support.
 
-### Making a Progressive Web App
+## Development notes
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- Components are implemented as React functional components.
+- Styling is plain CSS under `src/styles/`.
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+If you'd like, I can add a CONTRIBUTING section, deployment instructions, or update the README with screenshots — tell me which you'd prefer next.
